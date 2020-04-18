@@ -40,7 +40,7 @@ def post_photo_to_vk_group(access_token, group_id, filename, comment):
     response.raise_for_status()
     upload_url = response.json()['response']['upload_url']
 
-    with open('pic.png', 'rb') as file:
+    with open(filename, 'rb') as file:
         files = {
             'photo': file
         }
